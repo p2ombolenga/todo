@@ -30,4 +30,6 @@ class RootAPIView(APIView):
     def get(self, request):
         return Response({
             'todos': reverse('todos', request=request),
+            'login': reverse('login', request=request),
+            'refresh-token': reverse('refresh-token', request=request),
         })
